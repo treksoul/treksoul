@@ -7,6 +7,7 @@
   "scripts": {
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
     "dev": "cp .env.environment-localhost .env.development && npm i && cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "prod": "cp .env.production .env.development && npm i && cross-env NODE_OPTIONS=--no-deprecation next dev",
     "dev_replit": "cp .env.environment-replit .env.development && npm i && cross-env NODE_OPTIONS=--no-deprecation next dev",
     "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",

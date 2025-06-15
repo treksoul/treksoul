@@ -4,8 +4,8 @@ import config from '@/payload.config'
 
 import TrekDetailClient from '@/components/trek-detail-client'
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
   const payload = await getPayload({ config })
 
   /* fetch trek + global UI settings in parallel */

@@ -44,7 +44,7 @@ export function MobileMenu({
               alt="Treksoul Nepal"
               width={60}
               height={60}
-              className="size-[80px] md:size-[100px] "
+              className="size-[60px] sm:size-[70px] "
               priority={true}
             />
           </Link>

@@ -342,14 +342,13 @@ export default function BookNowSheet({
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button
-          size="lg"
           onClick={(e) => e.stopPropagation()}
           onPointerEnter={(e) => e.stopPropagation()}
           onPointerOver={(e) => e.stopPropagation()}
           onPointerMove={(e) => e.stopPropagation()}
           style={{ '--book-now-button-color': bookNowButtonColor } as CSSProperties}
           className="z-[100] my-4 cursor-pointer bg-[color:var(--book-now-button-color)]
-                     p-6 text-lg font-bold transition-all hover:scale-105
+                    text-lg font-bold py-5 sm:py-6 transition-all hover:scale-105
                      hover:bg-[color:var(--book-now-button-color)]"
         >
           {bookNowButtonText || 'Book now'}

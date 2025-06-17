@@ -94,6 +94,7 @@ export interface Config {
     footer: Footer;
     booking_sheet: BookingSheet;
     trek_detail_settings: TrekDetailSetting;
+    siteMetadata: SiteMetadatum;
   };
   globalsSelect: {
     header: HeaderSelect<false> | HeaderSelect<true>;
@@ -103,6 +104,7 @@ export interface Config {
     footer: FooterSelect<false> | FooterSelect<true>;
     booking_sheet: BookingSheetSelect<false> | BookingSheetSelect<true>;
     trek_detail_settings: TrekDetailSettingsSelect<false> | TrekDetailSettingsSelect<true>;
+    siteMetadata: SiteMetadataSelect<false> | SiteMetadataSelect<true>;
   };
   locale: null;
   user: User & {
@@ -600,6 +602,31 @@ export interface TrekDetailSetting {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "siteMetadata".
+ */
+export interface SiteMetadatum {
+  id: string;
+  defaultTitle: string;
+  titleTemplate?: string | null;
+  description: string;
+  keywords?: string[] | null;
+  themeColor?: string | null;
+  ogImage?: (string | null) | Media;
+  twitterHandle?: string | null;
+  icons?: {
+    android192?: (string | null) | Media;
+    android512?: (string | null) | Media;
+    appleTouch?: (string | null) | Media;
+    favicon16?: (string | null) | Media;
+    favicon32?: (string | null) | Media;
+    faviconICO?: (string | null) | Media;
+    webManifest?: (string | null) | Media;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "header_select".
  */
 export interface HeaderSelect<T extends boolean = true> {
@@ -731,6 +758,33 @@ export interface TrekDetailSettingsSelect<T extends boolean = true> {
   sticky_button_color?: T;
   duration_badge_color?: T;
   highlight_badge_color?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "siteMetadata_select".
+ */
+export interface SiteMetadataSelect<T extends boolean = true> {
+  defaultTitle?: T;
+  titleTemplate?: T;
+  description?: T;
+  keywords?: T;
+  themeColor?: T;
+  ogImage?: T;
+  twitterHandle?: T;
+  icons?:
+    | T
+    | {
+        android192?: T;
+        android512?: T;
+        appleTouch?: T;
+        favicon16?: T;
+        favicon32?: T;
+        faviconICO?: T;
+        webManifest?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

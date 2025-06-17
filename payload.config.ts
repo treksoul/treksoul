@@ -20,6 +20,7 @@ import ContactConfig from './globals/Contact'
 import BookingSheetConfig from './globals/Book-sheet'
 import { Media } from './collections/Media'
 import TrekDetailSettings from './globals/TrekDetailSettings'
+import MetaDataConfig from './globals/Meta-Data'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -44,6 +45,7 @@ export default buildConfig({
     ContactConfig,
     BookingSheetConfig,
     TrekDetailSettings,
+    MetaDataConfig,
   ],
 
   editor: lexicalEditor(),

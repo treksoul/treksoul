@@ -262,7 +262,7 @@ export default function TrekDetailClient({
       ) : null}
 
       {/* STICKY CTA --------------------------------------------- */}
-      <div className="fixed bottom-6 right-6 z-40 ">
+      <div className="fixed bottom-0 left-6 z-40 mt-4">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

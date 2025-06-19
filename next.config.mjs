@@ -14,7 +14,7 @@ const nextConfig = {
   },
 
   images: {
-    minimumCacheTTL: 12 * 60 * 60, // 12 hours
+    // minimumCacheTTL: 12 * 60 * 60, // 12 hours
 
     remotePatterns: [
       {

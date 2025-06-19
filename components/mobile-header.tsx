@@ -1,6 +1,5 @@
 'use client'
-import { Button } from '@/components/ui/button'
-import { BookingSheet, Header, Media } from '@/payload-types'
+import { BookingSheet, Header } from '@/payload-types'
 import Link from 'next/link'
 
 import {

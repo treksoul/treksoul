@@ -1,3 +1,4 @@
+export const revalidate = 60;
 import React from 'react'
 import './styles.css'
 import RefreshRouteOnSave from '@/components/refresh-route-on-save'

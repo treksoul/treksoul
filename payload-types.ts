@@ -169,10 +169,12 @@ export interface Trek {
         id?: string | null;
       }[]
     | null;
-  included: {
-    item: string;
-    id?: string | null;
-  }[];
+  included?:
+    | {
+        item: string;
+        id?: string | null;
+      }[]
+    | null;
   excluded?:
     | {
         item: string;
@@ -189,6 +191,7 @@ export interface Trek {
 export interface Media {
   id: string;
   alt: string;
+  caption?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -354,6 +357,7 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
+  caption?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;

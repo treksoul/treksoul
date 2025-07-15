@@ -244,9 +244,7 @@ export default function TrekDetailClient({
       <section className="container pb-16 pl-3">
         <h2 className="mb-5 text-2xl font-semibold lg:text-3xl">What’s included</h2>
         <ul className="grid list-disc gap-2 pl-6 font-semibold text-base lg:text-lg">
-          {trek.included.map(({ item, id }) => (
-            <li key={id}>{item}</li>
-          ))}
+          {trek && trek.included && trek.included.map(({ item, id }) => <li key={id}>{item}</li>)}
         </ul>
       </section>
 

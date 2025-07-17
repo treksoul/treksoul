@@ -45,7 +45,7 @@ export default function TrekSearch({ placeholder }: { placeholder?: string }) {
     ;(async () => {
       try {
         setLoading(true)
-        const { data } = await axios.get('/api/treks')
+        const { data } = await axios.get('/custom/treks')
         const docs: Trek[] = data.docs.map(({ id, slug, name, durationDays, price }: any) => ({
           id,
           slug,
